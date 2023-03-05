@@ -11,7 +11,7 @@ const products = [{title: "Great book"}];
 // /admin/add-product => GET
 router.get('/add-product', (req, res, next) => {
   // res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
-  res.render('add-product');
+  res.render('add-product', { myActivePath: 'on-admin-page' });
 });
 
 // /admin/add-product => POST
