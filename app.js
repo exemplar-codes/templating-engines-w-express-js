@@ -20,7 +20,7 @@ app.use('/admin', adminData.routes);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-  res.status(404).render('404', { viewEngine: app.get('view engine')});
+  res.status(404).render('404', { myActivePath: '404-page', docTitle: 'Page Not Found', viewEngine: app.get('view engine')});
 });
 
 app.listen(3000);
