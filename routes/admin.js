@@ -14,6 +14,7 @@ router.get('/add-product', (req, res, next) => {
   res.render('add-product', {
     myActivePath: 'on-admin-page',
     docTitle: 'Add product',
+    viewEngine: res.app.get('view engine')
   });
 });
 

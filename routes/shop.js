@@ -14,6 +14,7 @@ router.get('/', (req, res, next) => {
     prods: adminData.products,
     docTitle: 'My shop',
     myActivePath: 'shop-page',
+    viewEngine: res.app.get('view engine')
   });
 });
 
