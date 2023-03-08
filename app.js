@@ -23,4 +23,4 @@ app.use((req, res, next) => {
   res.status(404).render('404', { myActivePath: '404-page', docTitle: 'Page Not Found', viewEngine: app.get('view engine')});
 });
 
-app.listen(3000);
+app.listen(process.env.PORT  || 3000);
