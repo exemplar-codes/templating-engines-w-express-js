@@ -8,7 +8,9 @@ const app = express();
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
-app.set('view engine', 'pug');
+// app.set('view engine', 'pug');
+// app.set('views', 'views'); // not needed for this case, actually
+app.set('view engine', 'ejs');
 app.set('views', 'views'); // not needed for this case, actually
 
 app.use(bodyParser.urlencoded({extended: false}));
