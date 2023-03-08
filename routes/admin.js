@@ -24,5 +24,12 @@ router.post('/add-product', (req, res, next) => {
   res.redirect('/');
 });
 
+// /admin/add-product => POST
+router.post('/delete-all-products', (req, res, next) => {
+  while (products.length)
+    products.pop();
+  res.redirect('/');
+});
+
 exports.routes = router;
 exports.products = products;
