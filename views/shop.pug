@@ -10,6 +10,8 @@ block styles
 block content
     main
         div.grid
+            if prods.length === 0
+                h2 No products found! Please add some
             each product in prods
                 article.card.product-item
                     header.card__header
